@@ -139,8 +139,8 @@ print(" ")
 print("###########################################################")
 sys.stdout.close()
 
-fromaddr = "borgodo1@gmail.com"
-toaddr="bndidier@gmail.com"
+fromaddr = "Sender@email.com"
+toaddr="receiver@email.com"
 msg= MIMEMultipart('related')
 msg['from'] = fromaddr
 msg['To'] = toaddr
@@ -158,6 +158,6 @@ msg.attach(part)
 server = smtplib.SMTP("smtp.gmail.com:587")
 server.ehlo()
 server.starttls()
-server.login("borgodo1@gmail.com", "@Sophie1")
+server.login("your@email.com", "password")
 server.sendmail(fromaddr, toaddr, msg.as_string())
 server.quit()
